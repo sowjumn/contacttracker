@@ -1,0 +1,37 @@
+<div class="main">
+  <div class="row f-center vertical-double-inner">
+    <h1> Welcome To the Internal Contact Tracker </h1>
+  </div>
+
+  <div class="row">
+    <div class="unit col1of2 border-right">
+      <h2 class="vertical-inner"> If you are a Manager </h2>
+      <form accept-charset="UTF-8" action="/welcome/manager" method="get">
+        <div class="row vertical-half_inner">
+          <label for="manager_email">Email</label>
+        </div>
+        <div class="row">
+          <input id="manager_email" name="manager[email]" type="text" />
+        </div>
+        <div class="row">
+          <input class="btn" value="Find Account" type="submit" name="commit" />
+        </div>
+      </form>
+    </div>
+
+    <div class="horizontal-double-inner lastUnit">
+      <h2 class="vertical-inner"> If you are a Staff Member </h2>
+      <form accept-charset="UTF-8" action="/welcome/staff" method="get">
+        <div class="row vertical-half_inner">
+          <label for="manager_email">Email</label>
+        </div>
+        <div class="row">
+          <input id="staff_email" name="staff[email]" type="text" />
+        </div>
+        <div class="row">
+          <input class="btn" value="Find Account" type="submit" name="commit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

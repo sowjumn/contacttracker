@@ -1,0 +1,101 @@
+h1 {
+  font-size: 31px;
+  line-height: 1.5;
+  color: #333;
+}
+
+h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+img {
+  width: 190px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 3px 3px 3px #777;
+  -moz-box-shadow: 3px 3px 3px #777;
+  box-shadow: 3px 3px 3px #777;
+}
+
+body {
+  background-color: #E5EAEE;
+  font-family: sans-serif;
+}
+
+input {
+  width: 300px;
+  padding: 8px;
+  margin: 0 0 20px;
+  -web-kit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #5392f0;
+}
+
+input.btn {
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2); 
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2); 
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  width: 130px;
+  height: 40px;
+  font-size: 14px;
+  background-color: #7AAA3B;
+}
+
+.main {
+  margin: 40px
+}
+
+.border-right {
+  border-right: 1px solid gray;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.f-center {
+  text-align: center;
+}
+
+
+@media only screen
+and (min-width : 1224px) {
+  .navigation {
+    height: 500px;
+  }
+
+  .content {
+    height: 500px;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+  .navigation {
+    height: 200px;
+  }
+
+  .content {
+    height: 200px;
+  }
+}
+
+
+

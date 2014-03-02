@@ -3,7 +3,9 @@ Contacttracker::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
+  match '/welcome/manager', to: 'welcome#manager', via: :get
+  match '/welcome/staff', to: 'welcome#staff', via: :get 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
