@@ -26,7 +26,10 @@ class StaffMembersController < ApplicationController
 
   def update
     @staff_member = StaffMember.find(params[:id])
-    @staff_member.update_attributes(params[:manager])
+    @staff_member.name = params["staff_member"]["name"]
+    @staff_member.email = params["staff_member"]["email"]
+    @staff_member.phone = params["staff_member"]["phone"]
+    @staff_member.save
     render 'show'
   end
 
