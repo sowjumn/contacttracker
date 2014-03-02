@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="row f-center vertical-double-inner">
+    <h1> Hello <%= @manager.name %> hope your day is good so far </h1>
+  </div>
+
+  <div class="row">
+    <h2 class="vertical-double-inner"> Here is a list of your staff members you manage </h2>
+    <% @staff.each do |s| %>
+    <div class="row vertical-inner"> 
+      <div class="unit col4of5"><%= s.name %></div>
+      <div class="unit col1of10">
+        <%= button_to 'Edit', edit_staff_member_path(id: s.id), method: :get%>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>

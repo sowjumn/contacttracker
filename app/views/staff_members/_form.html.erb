@@ -1,0 +1,13 @@
+<%= form_for(@staff_member) do |f| %>
+  <div class="row"><%= f.label :name %></div>
+  <div class="row><%= f.text_field :name %></div>
+
+  <div class="row"><%= f.label :email %></div>
+  <div class="row><%= f.text_field :email %></div>
+
+  <div class="row"><%= f.label :phone %></div>
+  <div class="row><%= f.text_field :phone %></div>
+
+  <%= f.submit %>
+
+<% end %>

@@ -14,6 +14,7 @@ class ManagersController < ApplicationController
 
   def show
     @manager = Manager.find(params[:id])
+    @staff = @manager.staff_members
   end
 
   def index

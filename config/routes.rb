@@ -6,6 +6,8 @@ Contacttracker::Application.routes.draw do
   root 'welcome#index'
   match '/welcome/manager', to: 'welcome#manager', via: :get
   match '/welcome/staff', to: 'welcome#staff', via: :get 
+  resources :managers
+  resources :staff_members
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
