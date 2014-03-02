@@ -10,4 +10,20 @@
   </div>
   You can edit your profile here 
   <%= button_to 'Edit', edit_staff_member_path(id: @staff_member.id), method: :get %>
+
+  <div class="row vertical-double-inner">
+    <h2> Here is your manager information </h2>
+  </div>
+
+  <div class="row vertical-inner">
+    Manager Name: <%= @manager.name %>
+  </div>
+
+  <div class="row vertical-inner">
+    Manager Email: <%= @manager.email %>
+  </div>
+
+  <div class="row vertical-inner">
+    Manager Phone: <%= @manager.phone %>
+  </div>
 </div>

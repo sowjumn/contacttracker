@@ -4,7 +4,7 @@ class StaffMembersController < ApplicationController
   end
 
   def create
-    @staff_member = StaffMember.new(params[:staff])
+    @staff_member = StaffMember.new(params[:staff_member])
     if @staff_member.save
       render @staff_member
     else
@@ -14,6 +14,7 @@ class StaffMembersController < ApplicationController
 
   def show
     @staff_member = StaffMember.find(params[:id])
+    @manager = @staff_member.manager
   end
 
   def index
