@@ -25,8 +25,9 @@ class StaffMembersController < ApplicationController
   end
 
   def update
-    @staff_member = StaffMember.where(email: params[:manager][:email]).first
+    @staff_member = StaffMember.find(params[:id])
     @staff_member.update_attributes(params[:manager])
+    render 'show'
   end
 
   def destroy
