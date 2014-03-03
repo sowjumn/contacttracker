@@ -18,10 +18,6 @@ class StaffMembersController < ApplicationController
     @manager = @staff_member.manager
   end
 
-  def index
-    @all_staff = StaffMember.all
-  end
-
   def edit
     @staff_member = StaffMember.find(params[:id])
   end
