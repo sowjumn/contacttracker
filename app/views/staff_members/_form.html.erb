@@ -13,6 +13,6 @@
   <%= f.text_field :phone %>
 </div>
 
-<%= f.submit %>
+<%= link_to 'New', {:controller => "staff_members", :action => "create", :manager_id => @manager.id}%>
 
 <% end %>

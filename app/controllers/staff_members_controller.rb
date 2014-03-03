@@ -4,9 +4,10 @@ class StaffMembersController < ApplicationController
   end
 
   def create
-    @staff_member = StaffMember.new(params[:staff_member])
-    if @staff_member.save
-      render @staff_member
+    manager = Manager.find(params[:manager_id])
+    staff_member = manager.staff_members.build
+    if staff_member.save
+      render 'manager#show'
     else
       render new
     end
@@ -27,13 +28,16 @@ class StaffMembersController < ApplicationController
 
   def update
     @staff_member = StaffMember.find(params[:id])
-    @staff_member.name = params["staff_member"]["name"]
-    @staff_member.email = params["staff_member"]["email"]
-    @staff_member.phone = params["staff_member"]["phone"]
-    @staff_member.save
+    @staff_member.update_attributes(staff_params)
     render 'show'
   end
 
   def destroy
   end
+
+  private
+
+    def staff_params 
+      params.require(:staff_member).permit(:name, :email, :phone)
+    end
 end
