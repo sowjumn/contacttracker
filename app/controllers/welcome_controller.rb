@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
   end
 
   def staff
-    @staff = StaffMember.where(email: params[:staff][:email])
-    render "staffmembers/show"
+    @staff_member = StaffMember.where(email: params[:staff][:email]).first
+    redirect_to "/staff_members/#{@staff_member.id}"
   end
 end
