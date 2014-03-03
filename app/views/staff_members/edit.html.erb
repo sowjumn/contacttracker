@@ -1,1 +1,2 @@
 <%= render 'form' %>
+<%= link_to 'Update', {:controller => "staff_members", :action => "update", :manager_id => @manager.id}, method: :patch%>

@@ -7,7 +7,7 @@ class StaffMembersController < ApplicationController
     manager = Manager.find(params[:manager_id])
     staff_member = manager.staff_members.build
     if staff_member.save
-      render 'manager#show'
+      render 'managers#show'
     else
       render new
     end
@@ -20,20 +20,24 @@ class StaffMembersController < ApplicationController
 
   def edit
     @staff_member = StaffMember.find(params[:id])
+    @manager = @staff_member.manager
   end
 
   def update
+    puts "I am in staff memebers controller &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
     @staff_member = StaffMember.find(params[:id])
     @staff_member.update_attributes(staff_params)
-    render 'show'
+    @manager = @staff_member.manager
+    redirect_to @manager
   end
 
   def destroy
+
   end
 
   private
 
     def staff_params 
-      params.require(:staff_member).permit(:name, :email, :phone)
+      params.permit(:name, :email, :phone)
     end
 end

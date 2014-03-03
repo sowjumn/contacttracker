@@ -7,9 +7,12 @@
     <h2 class="vertical-double-inner"> Here is a list of your staff members you manage </h2>
     <% @staff.each do |s| %>
     <div class="row vertical-inner"> 
-      <div class="unit col4of5"><%= s.name %></div>
-      <div class="unit col1of10">
-        <%= button_to 'Edit', edit_staff_member_path(id: s.id), method: :get%>
+      <div class="unit col3of5"><%= s.name %></div>
+      <div class="unit col1of10 inner">
+        <%= link_to 'Edit', {controller: 'staff_members', :action => "edit", :id => s.id}%>
+      </div>
+      <div class="unit col1of10 inner">
+        <%= link_to 'Delete', {controller: 'staff_members', :id => s.id}, method: :delete%>
       </div>
     </div>
     <% end %>
